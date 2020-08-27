@@ -1,5 +1,5 @@
 //
-//  Character.swift
+//  Pokemon.swift
 //  PokeWars
 //
 //  Created by Kurs on 27/08/2020.
@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Character {
+struct CharacterData: Decodable {
     var name: String
+    var biography: Biography
+}
+
+struct Biography: Decodable {
     var publisher: String
     var alignment: String
 }

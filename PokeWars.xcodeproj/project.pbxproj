@@ -14,7 +14,8 @@
 		C541382B24F796A100DA3DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C541382A24F796A100DA3DAC /* Assets.xcassets */; };
 		C541382E24F796A100DA3DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C541382C24F796A100DA3DAC /* LaunchScreen.storyboard */; };
 		C541383624F796BA00DA3DAC /* CharacterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541383524F796BA00DA3DAC /* CharacterManager.swift */; };
-		C541383824F7B62300DA3DAC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541383724F7B62300DA3DAC /* Character.swift */; };
+		C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541383724F7B62300DA3DAC /* CharacterData.swift */; };
+		C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547E9FA24F82BCB00E2FB10 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		C541382D24F796A100DA3DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C541382F24F796A100DA3DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C541383524F796BA00DA3DAC /* CharacterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterManager.swift; sourceTree = "<group>"; };
-		C541383724F7B62300DA3DAC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		C541383724F7B62300DA3DAC /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
+		C547E9FA24F82BCB00E2FB10 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 				C541382C24F796A100DA3DAC /* LaunchScreen.storyboard */,
 				C541382F24F796A100DA3DAC /* Info.plist */,
 				C541383524F796BA00DA3DAC /* CharacterManager.swift */,
-				C541383724F7B62300DA3DAC /* Character.swift */,
+				C541383724F7B62300DA3DAC /* CharacterData.swift */,
+				C547E9FA24F82BCB00E2FB10 /* Character.swift */,
 			);
 			path = PokeWars;
 			sourceTree = "<group>";
@@ -144,9 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C541383824F7B62300DA3DAC /* Character.swift in Sources */,
+				C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */,
 				C541382624F7969F00DA3DAC /* ViewController.swift in Sources */,
 				C541382224F7969F00DA3DAC /* AppDelegate.swift in Sources */,
+				C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */,
 				C541382424F7969F00DA3DAC /* SceneDelegate.swift in Sources */,
 				C541383624F796BA00DA3DAC /* CharacterManager.swift in Sources */,
 			);
