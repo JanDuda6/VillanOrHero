@@ -12,4 +12,5 @@ struct Character {
     var name: String
     var publisher: String
     var alignment: String
+    var image: String
 }

@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     var a = CharacterManager()
     
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
         a.fetchCharacter()
+
     }
+
+    
 
 
 

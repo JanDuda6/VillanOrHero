@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct CharacterManager {
 
@@ -28,9 +29,12 @@ struct CharacterManager {
                 }
                 if let dataToDecode = data {
                     if let character = self.parseJson(with: dataToDecode) {
-                        print(character.name)
-                        print(character.publisher)
-                        print(character.alignment)
+                        if character.publisher != "Marvel Comics" {
+                            self.fetchCharacter()
+                        } else {
+                            print(character.publisher, character.name, character.alignment, character.image)
+                        }
+
                     }
                 }
             }
@@ -45,7 +49,8 @@ struct CharacterManager {
             let name = decodedData.name
             let publisher = decodedData.biography.publisher
             let alignment = decodedData.biography.alignment
-            let character = Character(name: name, publisher: publisher, alignment: alignment)
+            let imageURL = decodedData.image.url
+            let character = Character(name: name, publisher: publisher, alignment: alignment, image: imageURL)
 
             return character
 
@@ -54,4 +59,19 @@ struct CharacterManager {
         }
         return nil
     }
+
+    func setImage(from url: String, imageView: UIImageView) {
+        guard let imageURL = URL(string: url) else { return }
+
+            // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                imageView.image = image
+            }
+        }
+    }
+
 }
