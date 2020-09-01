@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 
+protocol CharacterManagerDelegate {
+    func didReceiveCharacterUpdate(_ characterManager: CharacterManager, character: Character)
+}
+
 struct CharacterManager {
 
     let url = "https://www.superheroapi.com/api.php/10214070745402015/"
+
+    var delegate: CharacterManagerDelegate?
 
     func fetchCharacter() {
         let randomInt = Int.random(in: 1...733)
@@ -32,9 +38,8 @@ struct CharacterManager {
                         if character.publisher != "Marvel Comics" {
                             self.fetchCharacter()
                         } else {
-                            print(character.publisher, character.name, character.alignment, character.image)
+                            self.delegate?.didReceiveCharacterUpdate(self, character: character)
                         }
-
                     }
                 }
             }
@@ -50,7 +55,7 @@ struct CharacterManager {
             let publisher = decodedData.biography.publisher
             let alignment = decodedData.biography.alignment
             let imageURL = decodedData.image.url
-            let character = Character(name: name, publisher: publisher, alignment: alignment, image: imageURL)
+            let character = Character(name: name, publisher: publisher, alignment: alignment, imageURL: imageURL)
 
             return character
 
@@ -59,19 +64,5 @@ struct CharacterManager {
         }
         return nil
     }
-
-    func setImage(from url: String, imageView: UIImageView) {
-        guard let imageURL = URL(string: url) else { return }
-
-            // just not to cause a deadlock in UI!
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-
-            let image = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                imageView.image = image
-            }
-        }
-    }
-
 }
+

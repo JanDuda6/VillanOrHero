@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct Character {
     var name: String
     var publisher: String
     var alignment: String
-    var image: String
+    var imageURL: String
 }
