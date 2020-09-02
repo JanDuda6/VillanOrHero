@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C541382224F7969F00DA3DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541382124F7969F00DA3DAC /* AppDelegate.swift */; };
 		C541382424F7969F00DA3DAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541382324F7969F00DA3DAC /* SceneDelegate.swift */; };
-		C541382624F7969F00DA3DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541382524F7969F00DA3DAC /* ViewController.swift */; };
+		C541382624F7969F00DA3DAC /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541382524F7969F00DA3DAC /* QuestionViewController.swift */; };
 		C541382924F7969F00DA3DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C541382724F7969F00DA3DAC /* Main.storyboard */; };
 		C541382B24F796A100DA3DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C541382A24F796A100DA3DAC /* Assets.xcassets */; };
 		C541382E24F796A100DA3DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C541382C24F796A100DA3DAC /* LaunchScreen.storyboard */; };
@@ -18,13 +18,18 @@
 		C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547E9FA24F82BCB00E2FB10 /* Character.swift */; };
 		C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F5F24FEB971002729B8 /* QuestionManager.swift */; };
 		C55B0F6224FEC7D7002729B8 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */; };
+		C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */; };
+		C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */; };
+		C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */; };
+		C5F5BFD824FFB51800598EA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD724FFB51800598EA6 /* User.swift */; };
+		C5F5BFDA24FFB57400598EA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD924FFB57400598EA6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C541381E24F7969F00DA3DAC /* PokeWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C541382124F7969F00DA3DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C541382324F7969F00DA3DAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C541382524F7969F00DA3DAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C541382524F7969F00DA3DAC /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		C541382824F7969F00DA3DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C541382A24F796A100DA3DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C541382D24F796A100DA3DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +39,11 @@
 		C547E9FA24F82BCB00E2FB10 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C55B0F5F24FEB971002729B8 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoresViewController.swift; sourceTree = "<group>"; };
+		C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		C5F5BFD724FFB51800598EA6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5F5BFD924FFB57400598EA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +76,49 @@
 		C541382024F7969F00DA3DAC /* PokeWars */ = {
 			isa = PBXGroup;
 			children = (
+				C5F5BFCD24FFA1B600598EA6 /* Model */,
+				C5F5BFCE24FFA1C500598EA6 /* Controllers */,
+				C5F5BFCF24FFA22A00598EA6 /* Views */,
 				C541382124F7969F00DA3DAC /* AppDelegate.swift */,
 				C541382324F7969F00DA3DAC /* SceneDelegate.swift */,
-				C541382524F7969F00DA3DAC /* ViewController.swift */,
-				C541382724F7969F00DA3DAC /* Main.storyboard */,
 				C541382A24F796A100DA3DAC /* Assets.xcassets */,
 				C541382C24F796A100DA3DAC /* LaunchScreen.storyboard */,
 				C541382F24F796A100DA3DAC /* Info.plist */,
+				C5F5BFD924FFB57400598EA6 /* Constants.swift */,
+			);
+			path = PokeWars;
+			sourceTree = "<group>";
+		};
+		C5F5BFCD24FFA1B600598EA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				C541383524F796BA00DA3DAC /* CharacterManager.swift */,
 				C541383724F7B62300DA3DAC /* CharacterData.swift */,
 				C547E9FA24F82BCB00E2FB10 /* Character.swift */,
 				C55B0F5F24FEB971002729B8 /* QuestionManager.swift */,
-				C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */,
+				C5F5BFD724FFB51800598EA6 /* User.swift */,
 			);
-			path = PokeWars;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5F5BFCE24FFA1C500598EA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */,
+				C541382524F7969F00DA3DAC /* QuestionViewController.swift */,
+				C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */,
+				C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */,
+				C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5F5BFCF24FFA22A00598EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C541382724F7969F00DA3DAC /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +194,14 @@
 			files = (
 				C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */,
 				C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */,
-				C541382624F7969F00DA3DAC /* ViewController.swift in Sources */,
+				C541382624F7969F00DA3DAC /* QuestionViewController.swift in Sources */,
+				C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */,
+				C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */,
 				C541382224F7969F00DA3DAC /* AppDelegate.swift in Sources */,
+				C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */,
+				C5F5BFDA24FFB57400598EA6 /* Constants.swift in Sources */,
 				C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */,
+				C5F5BFD824FFB51800598EA6 /* User.swift in Sources */,
 				C541382424F7969F00DA3DAC /* SceneDelegate.swift in Sources */,
 				C541383624F796BA00DA3DAC /* CharacterManager.swift in Sources */,
 				C55B0F6224FEC7D7002729B8 /* ScoreViewController.swift in Sources */,

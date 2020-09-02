@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         if questionManager.questionNumber == 5 {
-            performSegue(withIdentifier: "scoreVC", sender: self)
+            performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
         }
         questionManager.checkAnswer(sender.currentTitle!, characterAlignment: heroAlignment)
         characterManager.fetchCharacter()
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
 //MARK: - Character delegate
 
-extension ViewController: CharacterManagerDelegate {
+extension QuestionViewController: CharacterManagerDelegate {
     func didReceiveCharacterUpdate(_ characterManager: CharacterManager, character: Character) {
         DispatchQueue.main.async {
             self.textLabel.text = character.name
