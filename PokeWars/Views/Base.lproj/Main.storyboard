@@ -104,7 +104,7 @@
                         <outlet property="questionLabel" destination="A3f-ua-sHq" id="sXt-Om-jID"/>
                         <outlet property="scoreLabel" destination="cji-0n-dYN" id="dIq-RT-iiz"/>
                         <outlet property="textLabel" destination="TOP-mk-UCk" id="FZd-eS-IA3"/>
-                        <segue destination="idg-ZD-0cK" kind="presentation" identifier="scoreVC" modalPresentationStyle="fullScreen" id="Qxq-PK-qNH"/>
+                        <segue destination="idg-ZD-0cK" kind="show" identifier="scoreVC" id="Qxq-PK-qNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="-5361" y="-100"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--MainVC-->
         <scene sceneID="Mgr-Sn-V9p">
             <objects>
-                <viewController definesPresentationContext="YES" modalPresentationStyle="fullScreen" id="WEl-V8-OUd" customClass="MenuViewController" customModule="PokeWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainVC" definesPresentationContext="YES" modalPresentationStyle="fullScreen" id="WEl-V8-OUd" customClass="MenuViewController" customModule="PokeWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hG0-OR-hoR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,8 +190,8 @@
                     <connections>
                         <outlet property="newGameButton" destination="dxH-8E-SFU" id="l7D-Rz-InE"/>
                         <outlet property="topScoreButton" destination="Y8E-Rh-unx" id="1la-dp-a4M"/>
-                        <segue destination="e2J-cM-tqK" kind="presentation" identifier="showTopScoresSegue" modalPresentationStyle="fullScreen" id="B85-43-eHU"/>
-                        <segue destination="m7F-uN-p7L" kind="presentation" identifier="userVCSegue" modalPresentationStyle="fullScreen" id="FgR-f6-IlC"/>
+                        <segue destination="e2J-cM-tqK" kind="show" identifier="showTopScoresSegue" id="B85-43-eHU"/>
+                        <segue destination="m7F-uN-p7L" kind="show" identifier="userVCSegue" id="FgR-f6-IlC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAx-h9-lpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,14 +230,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hYB-J9-buf"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VSJ-fd-Xwk"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="questionsSegue" modalPresentationStyle="fullScreen" id="JdQ-lu-WfC"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="questionsSegue" id="JdQ-lu-WfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3te-nb-NUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
