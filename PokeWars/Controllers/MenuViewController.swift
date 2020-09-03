@@ -13,9 +13,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var topScoreButton: UIButton!
 
-    override func viewDidLoad() {
-    }
-
     @IBAction func buttonPressed(_ sender: UIButton) {
 
         if sender.titleLabel == newGameButton.titleLabel {

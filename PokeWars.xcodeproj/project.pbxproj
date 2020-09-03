@@ -17,12 +17,12 @@
 		C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541383724F7B62300DA3DAC /* CharacterData.swift */; };
 		C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547E9FA24F82BCB00E2FB10 /* Character.swift */; };
 		C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F5F24FEB971002729B8 /* QuestionManager.swift */; };
-		C55B0F6224FEC7D7002729B8 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */; };
 		C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */; };
 		C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */; };
 		C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */; };
 		C5F5BFD824FFB51800598EA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD724FFB51800598EA6 /* User.swift */; };
 		C5F5BFDA24FFB57400598EA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD924FFB57400598EA6 /* Constants.swift */; };
+		C5F5BFDC2500FB1600598EA6 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFDB2500FB1600598EA6 /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +38,12 @@
 		C541383724F7B62300DA3DAC /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		C547E9FA24F82BCB00E2FB10 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C55B0F5F24FEB971002729B8 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
-		C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoresViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD724FFB51800598EA6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5F5BFD924FFB57400598EA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5F5BFDB2500FB1600598EA6 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +104,11 @@
 		C5F5BFCE24FFA1C500598EA6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C55B0F6124FEC7D7002729B8 /* ScoreViewController.swift */,
-				C541382524F7969F00DA3DAC /* QuestionViewController.swift */,
-				C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */,
-				C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */,
 				C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */,
+				C541382524F7969F00DA3DAC /* QuestionViewController.swift */,
+				C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */,
+				C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */,
+				C5F5BFDB2500FB1600598EA6 /* ScoreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +197,7 @@
 				C541382624F7969F00DA3DAC /* QuestionViewController.swift in Sources */,
 				C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */,
 				C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */,
+				C5F5BFDC2500FB1600598EA6 /* ScoreViewController.swift in Sources */,
 				C541382224F7969F00DA3DAC /* AppDelegate.swift in Sources */,
 				C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */,
 				C5F5BFDA24FFB57400598EA6 /* Constants.swift in Sources */,
@@ -204,7 +205,6 @@
 				C5F5BFD824FFB51800598EA6 /* User.swift in Sources */,
 				C541382424F7969F00DA3DAC /* SceneDelegate.swift in Sources */,
 				C541383624F796BA00DA3DAC /* CharacterManager.swift in Sources */,
-				C55B0F6224FEC7D7002729B8 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

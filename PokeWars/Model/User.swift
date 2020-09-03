@@ -11,4 +11,9 @@ import Foundation
 struct User {
     var name: String
     var score: Int
+
+    init(name: String) {
+        self.name = name
+        score = 0
+    }
 }

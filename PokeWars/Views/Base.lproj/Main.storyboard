@@ -101,9 +101,10 @@
                     <navigationItem key="navigationItem" id="sLu-JF-zYk"/>
                     <connections>
                         <outlet property="image" destination="jWh-lE-gtL" id="KS2-tM-R1L"/>
-                        <outlet property="questionLabel" destination="A3f-ua-sHq" id="sXt-Om-jID"/>
+                        <outlet property="questionLabel" destination="TOP-mk-UCk" id="164-Dy-TJH"/>
+                        <outlet property="questionNumberLabel" destination="A3f-ua-sHq" id="sXt-Om-jID"/>
                         <outlet property="scoreLabel" destination="cji-0n-dYN" id="dIq-RT-iiz"/>
-                        <outlet property="textLabel" destination="TOP-mk-UCk" id="FZd-eS-IA3"/>
+                        <outlet property="userName" destination="Z9u-8L-Qf8" id="Oj0-AH-ql7"/>
                         <segue destination="idg-ZD-0cK" kind="show" identifier="scoreVC" id="Qxq-PK-qNH"/>
                     </connections>
                 </viewController>
@@ -114,18 +115,27 @@
         <!--Score View Controller-->
         <scene sceneID="Pu8-ho-Ks2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uf0-gd-oIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="idg-ZD-0cK" customClass="ScoreViewController" customModule="PokeWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yTG-wR-Tjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCO-xK-UPu">
-                                <rect key="frame" x="107" y="421" width="213" height="90"/>
+                                <rect key="frame" x="107" y="450" width="213" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Main Menu"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgK-40-Tp6">
+                                <rect key="frame" x="107" y="450" width="213" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Main Menu"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="idg-ZD-0cK" eventType="touchUpInside" id="st7-KW-sck"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-t9-1sh">
-                                <rect key="frame" x="62" y="242" width="302" height="90"/>
+                                <rect key="frame" x="69" y="239" width="302" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -137,12 +147,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6ZT-4j-PZy"/>
                     <connections>
-                        <outlet property="scoreLabel" destination="4z1-t9-1sh" id="Urd-iD-gUY"/>
+                        <outlet property="scoreLabel" destination="4z1-t9-1sh" id="XHi-Jd-A6H"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uf0-gd-oIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1871" y="-100"/>
+            <point key="canvasLocation" x="-1861" y="-100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f40-dF-kv3">
@@ -172,6 +181,9 @@
                                 <rect key="frame" x="103" y="480" width="209" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Top Scores"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="WEl-V8-OUd" eventType="touchUpInside" id="19f-01-dmy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxH-8E-SFU">
                                 <rect key="frame" x="103" y="343" width="209" height="55"/>
@@ -190,8 +202,8 @@
                     <connections>
                         <outlet property="newGameButton" destination="dxH-8E-SFU" id="l7D-Rz-InE"/>
                         <outlet property="topScoreButton" destination="Y8E-Rh-unx" id="1la-dp-a4M"/>
-                        <segue destination="e2J-cM-tqK" kind="show" identifier="showTopScoresSegue" id="B85-43-eHU"/>
-                        <segue destination="m7F-uN-p7L" kind="show" identifier="userVCSegue" id="FgR-f6-IlC"/>
+                        <segue destination="e2J-cM-tqK" kind="show" identifier="showTopScoresSegue" animates="NO" id="B85-43-eHU"/>
+                        <segue destination="m7F-uN-p7L" kind="show" identifier="userVCSegue" animates="NO" id="FgR-f6-IlC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAx-h9-lpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,7 +236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="m7F-uN-p7L" eventType="touchUpInside" id="Jkf-sI-46H"/>
                                 </connections>
@@ -238,6 +250,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="userNameTextField" destination="oBD-I3-Kxf" id="DF5-Xk-Esn"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="questionsSegue" id="JdQ-lu-WfC"/>
                     </connections>
                 </viewController>
@@ -307,6 +320,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="e2J-cM-tqK" eventType="touchUpInside" id="NUy-a4-TAz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
