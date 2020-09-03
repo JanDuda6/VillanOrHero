@@ -10,7 +10,7 @@ import Foundation
 
 struct QuestionManager {
     var userResult = 0
-    var questionNumber = 0
+    var questionNumber = 1
 
     mutating func checkAnswer(_ userAnswer: String, characterAlignment: String) {
 
