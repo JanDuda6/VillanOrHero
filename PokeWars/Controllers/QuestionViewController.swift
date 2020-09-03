@@ -17,22 +17,21 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var questionNumberLabel: UILabel!
     
     var heroAlignment = ""
-    var user: User?
 
     var characterManager = CharacterManager()
-    var questionManager = QuestionManager()
+    var questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         characterManager.delegate = self
         characterManager.fetchCharacter()
-        userName.text = user?.name
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         if questionManager.questionNumber == 5 {
             questionManager.checkAnswer(sender.currentTitle!, characterAlignment: heroAlignment)
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
+            questionManager.addScoreToDictionary(with: questionManager.userName, and: questionManager.userResult)
             performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
         } else {
             questionManager.checkAnswer(sender.currentTitle!, characterAlignment: heroAlignment)

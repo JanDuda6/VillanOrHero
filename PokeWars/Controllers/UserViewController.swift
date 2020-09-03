@@ -12,8 +12,7 @@ class UserViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
 
-    var questionManager = QuestionManager()
-    var user = User(name: "User")
+    var questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
         userNameTextField.delegate = self
@@ -30,16 +29,14 @@ extension UserViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         if let userName = userNameTextField.text {
-            user.name = userName
+            questionManager.userName = userName
+            
+        } else {
+            questionManager.userName = "User"
         }
+
         textField.resignFirstResponder()
         performSegue(withIdentifier: Constants.questionVCSegue, sender: self)
         return true
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if let questionVC = segue.destination as? QuestionViewController {
-        questionVC.user = user
-        }
     }
 }

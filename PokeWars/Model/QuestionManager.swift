@@ -8,11 +8,17 @@
 
 import Foundation
 
-struct QuestionManager {
+class QuestionManager {
+    static let sharedInstance = QuestionManager()
+    private init() {}
+    
     var userResult = 0
     var questionNumber = 1
+    var userName = ""
 
-    mutating func checkAnswer(_ userAnswer: String, characterAlignment: String) {
+    var tableScores = [String: Int]()
+
+    func checkAnswer(_ userAnswer: String, characterAlignment: String) {
 
         if userAnswer == characterAlignment {
             userResult += 1
@@ -20,8 +26,14 @@ struct QuestionManager {
         questionNumber += 1
     }
 
-    mutating func createNewUser(with name: String) -> User {
-        var user = User(name: name)
-        return user
+    func addScoreToDictionary(with key: String, and value: Int) {
+            tableScores[key] = value
     }
+
+    func clearQuestionManager() {
+        userResult = 0
+        questionNumber = 1
+        userName = ""
+    }
+
 }
