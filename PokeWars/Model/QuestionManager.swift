@@ -10,13 +10,12 @@ import Foundation
 
 class QuestionManager {
     static let sharedInstance = QuestionManager()
+    let defaults = UserDefaults.standard
     private init() {}
-    
+
     var userResult = 0
     var questionNumber = 1
     var userName = ""
-
-    var tableScores = [String: Int]()
 
     func checkAnswer(_ userAnswer: String, characterAlignment: String) {
 
@@ -26,8 +25,27 @@ class QuestionManager {
         questionNumber += 1
     }
 
-    func addScoreToDictionary(with key: String, and value: Int) {
-            tableScores[key] = value
+    func addScoreToUserDefault(with key: String, and value: Int) {
+
+
+        var topScoreArray = defaults.dictionary(forKey: "TopScore")!
+
+
+    
+
+
+
+        topScoreArray[key] = value
+
+
+
+
+
+
+
+
+
+        defaults.set(topScoreArray, forKey: "TopScore")
     }
 
     func clearQuestionManager() {

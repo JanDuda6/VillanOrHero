@@ -15,9 +15,8 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
 
     override func viewDidLoad() {
-        scoreLabel.text = "\(questionManager.userName), you score: \(questionManager.userResult)"
-        print(questionManager.tableScores)
-        
+        scoreLabel.text = "\(questionManager.userName), you scored: \(questionManager.userResult)"
+        print(questionManager.defaults.dictionary(forKey: "TopScore")!)
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

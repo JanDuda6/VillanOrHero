@@ -10,6 +10,13 @@ import UIKit
 
 class TopScoresViewController: UIViewController {
 
+    @IBOutlet weak var score1: UILabel!
+
+    let questionManager = QuestionManager.sharedInstance
+
+    override func viewDidLoad() {
+    }
+
     @IBAction func buttonPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
