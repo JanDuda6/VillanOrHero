@@ -16,7 +16,6 @@ class ScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         scoreLabel.text = "\(questionManager.userName), you scored: \(questionManager.userResult)"
-        print(questionManager.defaults.dictionary(forKey: "TopScore")!)
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
