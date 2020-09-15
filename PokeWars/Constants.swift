@@ -13,4 +13,6 @@ struct Constants {
     static let userVCSegue = "userVCSegue"
     static let questionVCSegue = "questionsSegue"
     static let scoreVCSegue = "scoreVC"
+    static let SFSymbol = "person.crop.rectangle"
+    static let userDefaultKey = "TopScore"
 }

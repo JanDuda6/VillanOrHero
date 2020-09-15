@@ -11,7 +11,8 @@ import UIKit
 class UserViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
-
+    @IBOutlet weak var errorMessage: UILabel!
+    
     var questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
@@ -29,14 +30,20 @@ extension UserViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         if let userName = userNameTextField.text {
-            questionManager.userName = userName
-            
+
+            if questionManager.checkUserName(userName: userName) {
+                questionManager.userName = userName
+                textField.resignFirstResponder()
+                performSegue(withIdentifier: Constants.questionVCSegue, sender: self)
+
+            } else {
+                errorMessage.text = "Name is already taken"
+            }
+
         } else {
-            questionManager.userName = "User"
+            errorMessage.text = "Enter your name"
         }
 
-        textField.resignFirstResponder()
-        performSegue(withIdentifier: Constants.questionVCSegue, sender: self)
         return true
     }
 }

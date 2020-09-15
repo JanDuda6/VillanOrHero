@@ -55,14 +55,19 @@ extension QuestionViewController: CharacterManagerDelegate {
     }
 
     func parseImage(from url: String) {
+        self.image.image = .none
         guard let imageURL = URL(string: url) else { return }
 
         DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-
-            let image = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                self.image.image = image
+            if let imageData = try? Data(contentsOf: imageURL) {
+                let image = UIImage(data: imageData)
+                DispatchQueue.main.async {
+                    self.image.image = image
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.image.image = UIImage(systemName: Constants.SFSymbol)
+                }
             }
         }
     }
