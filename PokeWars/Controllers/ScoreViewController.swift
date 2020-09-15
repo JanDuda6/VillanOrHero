@@ -10,9 +10,8 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    @IBOutlet private weak var scoreLabel: UILabel!
     let questionManager = QuestionManager.sharedInstance
-
-    @IBOutlet weak var scoreLabel: UILabel!
 
     override func viewDidLoad() {
         scoreLabel.text = "\(questionManager.userName), you scored: \(questionManager.userResult)"

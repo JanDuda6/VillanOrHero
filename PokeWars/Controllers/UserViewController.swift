@@ -10,8 +10,8 @@ import UIKit
 
 class UserViewController: UIViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var errorMessage: UILabel!
     
     var questionManager = QuestionManager.sharedInstance
 
@@ -24,22 +24,18 @@ class UserViewController: UIViewController {
     }
 }
 //MARK: - Text Field Delegate
-
 extension UserViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         if let userName = userNameTextField.text {
-
             if questionManager.checkUserName(userName: userName) {
                 questionManager.userName = userName
                 textField.resignFirstResponder()
                 performSegue(withIdentifier: Constants.questionVCSegue, sender: self)
-
             } else {
                 errorMessage.text = "Name is already taken"
             }
-
         } else {
             errorMessage.text = "Enter your name"
         }

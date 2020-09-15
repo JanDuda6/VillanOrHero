@@ -10,11 +10,11 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet private weak var userName: UILabel!
+    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var questionNumberLabel: UILabel!
     
     var heroAlignment = ""
 
@@ -42,9 +42,7 @@ class QuestionViewController: UIViewController {
         }
     }
 }
-
 //MARK: - Character delegate
-
 extension QuestionViewController: CharacterManagerDelegate {
     func didReceiveCharacterUpdate(_ characterManager: CharacterManager, character: Character) {
         DispatchQueue.main.async {

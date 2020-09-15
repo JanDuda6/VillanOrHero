@@ -10,14 +10,12 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
-    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet private weak var newGameButton: UIButton!
     @IBOutlet weak var topScoreButton: UIButton!
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-
         if sender.titleLabel == newGameButton.titleLabel {
             performSegue(withIdentifier: Constants.userVCSegue, sender: self)
-
         } else {
             performSegue(withIdentifier: Constants.topScoresVCSegue, sender: self)
         }

@@ -56,9 +56,7 @@ struct CharacterManager {
             let alignment = decodedData.biography.alignment
             let imageURL = decodedData.image.url
             let character = Character(name: name, publisher: publisher, alignment: alignment, imageURL: imageURL)
-
             return character
-
         } catch {
             print("Error with decoding data: \(error)")
         }

@@ -11,7 +11,6 @@ import UIKit
 class TopScoresViewController: UIViewController {
 
     let questionManager = QuestionManager.sharedInstance
-
     var counterY = 347
 
     override func viewDidLoad() {

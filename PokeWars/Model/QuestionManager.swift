@@ -53,12 +53,10 @@ class QuestionManager {
                 convertedDict.removeValue(forKey: topScoreSorted.first!.key)
                 convertedDict[key] = value
             }
-
             if topScoreSorted.count < elementsInFullArray {
                 convertedDict[key] = value
             }
             defaults.set(convertedDict, forKey: Constants.userDefaultKey)
-
         } else {
             let q = [key: value]
             defaults.set(q, forKey: Constants.userDefaultKey)
@@ -67,7 +65,6 @@ class QuestionManager {
 
     func typecastAnyToInt(dictionary: [String: Any]) -> [String: Int] {
         var convertedDictionary = [String: Int]()
-
         for elements in dictionary {
             convertedDictionary[elements.key] = elements.value as? Int
         }
