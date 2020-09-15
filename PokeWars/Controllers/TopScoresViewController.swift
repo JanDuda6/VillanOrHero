@@ -21,7 +21,6 @@ class TopScoresViewController: UIViewController {
                 counterY += 65
             }
         } else {
-
             createLabel(with: "Empty", and: counterY)
         }
     }

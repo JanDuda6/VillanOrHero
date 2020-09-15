@@ -43,7 +43,6 @@ extension UserViewController: UITextFieldDelegate {
         } else {
             errorMessage.text = "Enter your name"
         }
-
         return true
     }
 }

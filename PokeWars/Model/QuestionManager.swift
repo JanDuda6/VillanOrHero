@@ -19,27 +19,21 @@ class QuestionManager {
     let elementsInFullArray = 5
 
     func checkUserName(userName: String) -> Bool {
-        var checkBool = true
-
+        var trueOrFalse = true
         // checks if userName has only whitespaces
         if userName.trimmingCharacters(in: .whitespaces).isEmpty {
-            checkBool = false
-            return checkBool
+            trueOrFalse = false
+            return trueOrFalse
         }
-        if let usersNames = defaults.dictionary(forKey: Constants.SFSymbol)?.keys {
+        if let usersNames = defaults.dictionary(forKey: Constants.userDefaultKey)?.keys {
             // checks if userName exists in "TopScoreArray"
             for name in usersNames {
-                if name == userName {
-                    checkBool = false
-                    break
-                } else {
-                    checkBool = true
-                }
+                if name == userName { trueOrFalse = false; break }
             }
         } else {
-            checkBool = true
+            trueOrFalse = true
         }
-        return checkBool
+        return trueOrFalse
     }
 
     func checkAnswer(_ userAnswer: String, characterAlignment: String) {
@@ -51,16 +45,16 @@ class QuestionManager {
         // UserDefaults array
         if let userDefaultsArray = defaults.dictionary(forKey: Constants.userDefaultKey) {
             // convert [String: Any] to [String: Int]
-            var convertedDict = convertToStringIntDictionary(dictionary: userDefaultsArray)
+            var convertedDict = typecastAnyToInt(dictionary: userDefaultsArray)
             // sort by value
             let topScoreSorted = convertedDict.sorted {$0.1 < $1.1}
-
-            // checks if array has more than 5 elements and if value is higher than origin, if true removes last value and add higher one
+            // checks if array has more than 5 elements, if true removes last value and add higher one
             if topScoreSorted.count >= elementsInFullArray && topScoreSorted.first!.value <= value {
                 convertedDict.removeValue(forKey: topScoreSorted.first!.key)
                 convertedDict[key] = value
+            }
 
-            } else if topScoreSorted.count < elementsInFullArray {
+            if topScoreSorted.count < elementsInFullArray {
                 convertedDict[key] = value
             }
             defaults.set(convertedDict, forKey: Constants.userDefaultKey)
@@ -71,7 +65,7 @@ class QuestionManager {
         }
     }
 
-    func convertToStringIntDictionary(dictionary: [String: Any]) -> [String: Int] {
+    func typecastAnyToInt(dictionary: [String: Any]) -> [String: Int] {
         var convertedDictionary = [String: Int]()
 
         for elements in dictionary {
@@ -82,7 +76,7 @@ class QuestionManager {
 
     func loadUserDefault() -> [String: Int]? {
         if let userDefaultsArray = defaults.dictionary(forKey: Constants.userDefaultKey) {
-            return convertToStringIntDictionary(dictionary: userDefaultsArray)
+            return typecastAnyToInt(dictionary: userDefaultsArray)
         } else {
             return nil
         }
