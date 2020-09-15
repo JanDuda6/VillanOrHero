@@ -43,10 +43,7 @@ class QuestionManager {
     }
 
     func checkAnswer(_ userAnswer: String, characterAlignment: String) {
-
-        if userAnswer == characterAlignment {
-            userResult += 1
-        }
+        userAnswer == characterAlignment ? (userResult += 1) : (userResult += 0)
         questionNumber += 1
     }
 
