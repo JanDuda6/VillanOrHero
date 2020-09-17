@@ -20,8 +20,8 @@ struct CharacterManager {
     var delegate: CharacterManagerDelegate?
 
     func fetchCharacter() {
-        let randomInt = Int.random(in: 1...733)
-        let urlToString = "\(url)\(randomInt)"
+        let randomNumber = Int.random(in: 1...733)
+        let urlToString = "\(url)\(randomNumber)"
         performURLSession(stringURL: urlToString)
     }
 

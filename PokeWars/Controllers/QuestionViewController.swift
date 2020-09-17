@@ -61,6 +61,8 @@ extension QuestionViewController: CharacterManagerDelegate {
                 let image = UIImage(data: imageData)
                 DispatchQueue.main.async {
                     self.image.image = image
+                    self.image.layer.cornerRadius = 20
+                    self.image.clipsToBounds = true
                 }
             } else {
                 DispatchQueue.main.async {
