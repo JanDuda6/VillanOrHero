@@ -25,7 +25,7 @@ class TopScoresViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: false)
     }
 
     func createLabel(with text: String, and y: Int) {

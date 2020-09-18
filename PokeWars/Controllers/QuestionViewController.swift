@@ -30,12 +30,12 @@ class QuestionViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         if questionManager.questionNumber == 5 {
-            questionManager.checkAnswer(sender.currentTitle!, characterAlignment: heroAlignment)
+            questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment)
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
             questionManager.addScoreToUserDefault(with: questionManager.userName, and: questionManager.userResult)
             performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
         } else {
-            questionManager.checkAnswer(sender.currentTitle!, characterAlignment: heroAlignment)
+            questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment)
             characterManager.fetchCharacter()
             scoreLabel.text = "Score: \(questionManager.userResult)"
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
@@ -61,12 +61,10 @@ extension QuestionViewController: CharacterManagerDelegate {
                 let image = UIImage(data: imageData)
                 DispatchQueue.main.async {
                     self.image.image = image
-                    self.image.layer.cornerRadius = 20
-                    self.image.clipsToBounds = true
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.image.image = UIImage(systemName: Constants.SFSymbol)
+                    self.image.image = UIImage(systemName: Constants.SFSymbol)?.withTintColor(.black, renderingMode: .alwaysOriginal)
                 }
             }
         }

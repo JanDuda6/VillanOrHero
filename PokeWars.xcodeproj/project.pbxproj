@@ -17,6 +17,8 @@
 		C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541383724F7B62300DA3DAC /* CharacterData.swift */; };
 		C547E9FB24F82BCB00E2FB10 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547E9FA24F82BCB00E2FB10 /* Character.swift */; };
 		C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F5F24FEB971002729B8 /* QuestionManager.swift */; };
+		C567E8E82514E46300CB77F6 /* Best Friends Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C567E8E72514E46300CB77F6 /* Best Friends Font.ttf */; };
+		C567E8EA2514E62F00CB77F6 /* MarvelRegular-Dj83.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C567E8E92514E62F00CB77F6 /* MarvelRegular-Dj83.ttf */; };
 		C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */; };
 		C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */; };
 		C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */; };
@@ -37,6 +39,8 @@
 		C541383724F7B62300DA3DAC /* CharacterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		C547E9FA24F82BCB00E2FB10 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C55B0F5F24FEB971002729B8 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		C567E8E72514E46300CB77F6 /* Best Friends Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Best Friends Font.ttf"; sourceTree = "<group>"; };
+		C567E8E92514E62F00CB77F6 /* MarvelRegular-Dj83.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarvelRegular-Dj83.ttf"; sourceTree = "<group>"; };
 		C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoresViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +87,18 @@
 				C541382C24F796A100DA3DAC /* LaunchScreen.storyboard */,
 				C541382F24F796A100DA3DAC /* Info.plist */,
 				C5F5BFD924FFB57400598EA6 /* Constants.swift */,
+				C567E8E62514E44000CB77F6 /* Fonts */,
 			);
 			path = PokeWars;
+			sourceTree = "<group>";
+		};
+		C567E8E62514E44000CB77F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C567E8E72514E46300CB77F6 /* Best Friends Font.ttf */,
+				C567E8E92514E62F00CB77F6 /* MarvelRegular-Dj83.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C5F5BFCD24FFA1B600598EA6 /* Model */ = {
@@ -177,6 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C541382E24F796A100DA3DAC /* LaunchScreen.storyboard in Resources */,
+				C567E8E82514E46300CB77F6 /* Best Friends Font.ttf in Resources */,
+				C567E8EA2514E62F00CB77F6 /* MarvelRegular-Dj83.ttf in Resources */,
 				C541382B24F796A100DA3DAC /* Assets.xcassets in Resources */,
 				C541382924F7969F00DA3DAC /* Main.storyboard in Resources */,
 			);
