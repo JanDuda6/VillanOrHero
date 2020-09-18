@@ -14,7 +14,7 @@ class ScoreViewController: UIViewController {
     let questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
-        scoreLabel.text = "\(questionManager.userName), you scored: \(questionManager.userResult)"
+        scoreLabel.text = "\(questionManager.userName)!\n you scored \(questionManager.userResult) points"
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

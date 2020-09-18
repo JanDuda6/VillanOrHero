@@ -16,7 +16,7 @@ class TopScoresViewController: UIViewController {
     override func viewDidLoad() {
         if let topScore = questionManager.loadUserDefault()?.sorted(by: {$0.1 > $1.1}) {
             for scores in topScore {
-                createLabel(with: "\(scores.key) \(scores.value)", and: counterY)
+                createLabel(with: "\(scores.key)    \(scores.value)", and: counterY)
                 counterY += 65
             }
         } else {
@@ -29,11 +29,11 @@ class TopScoresViewController: UIViewController {
     }
 
     func createLabel(with text: String, and y: Int) {
-        let scoreLabel = UILabel(frame: CGRect(x: 98, y: y, width: 217, height: 57))
-        scoreLabel.backgroundColor = #colorLiteral(red: 0.8706822395, green: 0.8706822395, blue: 0.8706822395, alpha: 1)
-        scoreLabel.layer.cornerRadius = 5
+        let scoreLabel = UILabel(frame: CGRect(x: 98, y: y, width: 222, height: 56))
         scoreLabel.text = text
         scoreLabel.textAlignment = .center
+        scoreLabel.font = UIFont.init(name: "Best Friends Font", size: 50)
+        scoreLabel.textColor = .black
         self.view.addSubview(scoreLabel)
     }
 }
