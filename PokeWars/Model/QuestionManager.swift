@@ -28,7 +28,10 @@ class QuestionManager {
         if let usersNames = defaults.dictionary(forKey: Constants.userDefaultKey)?.keys {
             // checks if userName exists in "TopScoreArray"
             for name in usersNames {
-                if name == userName { trueOrFalse = false; break }
+                if name.trimmingCharacters(in: .whitespaces) == userName.trimmingCharacters(in: .whitespaces) {
+                    trueOrFalse = false
+                    break
+                }
             }
         } else {
             trueOrFalse = true

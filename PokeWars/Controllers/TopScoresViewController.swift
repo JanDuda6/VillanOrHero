@@ -16,11 +16,11 @@ class TopScoresViewController: UIViewController {
     override func viewDidLoad() {
         if let topScore = questionManager.loadUserDefault()?.sorted(by: {$0.1 > $1.1}) {
             for scores in topScore {
-                createLabel(with: "\(scores.key)    \(scores.value)", and: counterY)
+                createUILabel(with: "\(scores.key)    \(scores.value)", and: counterY)
                 counterY += 65
             }
         } else {
-            createLabel(with: "Empty", and: counterY)
+            createUILabel(with: "Empty", and: counterY)
         }
     }
 
@@ -28,7 +28,7 @@ class TopScoresViewController: UIViewController {
         self.navigationController?.popViewController(animated: false)
     }
 
-    func createLabel(with text: String, and y: Int) {
+    func createUILabel(with text: String, and y: Int) {
         let scoreLabel = UILabel(frame: CGRect(x: 98, y: y, width: 222, height: 56))
         scoreLabel.text = text
         scoreLabel.textAlignment = .center
