@@ -19,6 +19,7 @@
 		C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B0F5F24FEB971002729B8 /* QuestionManager.swift */; };
 		C567E8E82514E46300CB77F6 /* Best Friends Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C567E8E72514E46300CB77F6 /* Best Friends Font.ttf */; };
 		C567E8EA2514E62F00CB77F6 /* MarvelRegular-Dj83.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C567E8E92514E62F00CB77F6 /* MarvelRegular-Dj83.ttf */; };
+		C567E8EC2519F74C00CB77F6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E8EB2519F74C00CB77F6 /* CustomButton.swift */; };
 		C5F5BFD224FFA9E200598EA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */; };
 		C5F5BFD424FFB16300598EA6 /* TopScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */; };
 		C5F5BFD624FFB1D500598EA6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */; };
@@ -41,6 +42,7 @@
 		C55B0F5F24FEB971002729B8 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		C567E8E72514E46300CB77F6 /* Best Friends Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Best Friends Font.ttf"; sourceTree = "<group>"; };
 		C567E8E92514E62F00CB77F6 /* MarvelRegular-Dj83.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarvelRegular-Dj83.ttf"; sourceTree = "<group>"; };
+		C567E8EB2519F74C00CB77F6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C5F5BFD124FFA9E200598EA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD324FFB16300598EA6 /* TopScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoresViewController.swift; sourceTree = "<group>"; };
 		C5F5BFD524FFB1D500598EA6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				C541382724F7969F00DA3DAC /* Main.storyboard */,
+				C567E8EB2519F74C00CB77F6 /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C567E8EC2519F74C00CB77F6 /* CustomButton.swift in Sources */,
 				C541383824F7B62300DA3DAC /* CharacterData.swift in Sources */,
 				C55B0F6024FEB971002729B8 /* QuestionManager.swift in Sources */,
 				C541382624F7969F00DA3DAC /* QuestionViewController.swift in Sources */,
@@ -293,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -34,6 +34,8 @@ class TopScoresViewController: UIViewController {
         scoreLabel.textAlignment = .center
         scoreLabel.font = UIFont.init(name: "Best Friends Font", size: 50)
         scoreLabel.textColor = .black
+        scoreLabel.shadowOffset = CGSize(width: 2, height: 2)
+        scoreLabel.shadowColor = .white
         self.view.addSubview(scoreLabel)
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
     
     @IBOutlet private weak var newGameButton: UIButton!
-    @IBOutlet weak var topScoreButton: UIButton!
+    @IBOutlet private weak var topScoreButton: UIButton!
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         if sender.titleLabel == newGameButton.titleLabel {
