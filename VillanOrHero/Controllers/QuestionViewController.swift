@@ -57,7 +57,7 @@ class QuestionViewController: UIViewController {
 //MARK: - Character delegate
 extension QuestionViewController: CharacterManagerDelegate {
     func didReceiveCharacterUpdate(_ characterManager: CharacterManager, character: Character) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.scoreLabel.font = UIFont.init(name: "Chalkboard SE Regular", size: 19)
             self.scoreLabel.textColor = .black
             self.scoreLabel.shadowOffset = CGSize(width: 0, height: 0)
