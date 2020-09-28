@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PokeWars.xcodeproj">
+      location = "self:/Users/Kurs/Swift/Programy/MarvelVillanOrHero/VillanOrHero.xcodeproj">
    </FileRef>
 </Workspace>

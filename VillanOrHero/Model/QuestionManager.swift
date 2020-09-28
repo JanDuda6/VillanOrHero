@@ -1,6 +1,6 @@
 //
 //  QuestionManager.swift
-//  PokeWars
+//  MarvelVillanOrHero
 //
 //  Created by Kurs on 01/09/2020.
 //  Copyright © 2020 Kurs. All rights reserved.
@@ -39,10 +39,18 @@ class QuestionManager {
         return trueOrFalse
     }
 
-    func checkAnswer(_ userAnswer: String, characterAlignment: String) {
-        userAnswer == characterAlignment ? (userResult += 1) : (userResult += 0)
+    func checkAnswer(_ userAnswer: String, characterAlignment: String) -> Bool {
+        var trueOrFalseAnswer = true
+
+        if userAnswer == characterAlignment {
+            userResult += 1
+        } else {
+            trueOrFalseAnswer = false
+        }
         questionNumber += 1
+        return trueOrFalseAnswer
     }
+
 
     func addScoreToUserDefault(with key: String, and value: Int) {
         // UserDefaults array

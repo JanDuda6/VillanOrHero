@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  PokeWars
+//  MarvelVillanOrHero
 //
 //  Created by Kurs on 27/08/2020.
 //  Copyright © 2020 Kurs. All rights reserved.
@@ -15,6 +15,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var backGroundLabel: UILabel!
     
     var heroAlignment = ""
 
@@ -30,15 +31,26 @@ class QuestionViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         if questionManager.questionNumber == 5 {
-            questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment)
+            checkAnswerAndChangeUIColor(sender: sender)
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
             questionManager.addScoreToUserDefault(with: questionManager.userName, and: questionManager.userResult)
             performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
         } else {
-            questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment)
+            checkAnswerAndChangeUIColor(sender: sender)
             characterManager.fetchCharacter()
             scoreLabel.text = "Score: \(questionManager.userResult)"
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
+        }
+    }
+    func checkAnswerAndChangeUIColor (sender: UIButton) {
+        if questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment) {
+            backGroundLabel.backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.8745098039, blue: 0.6, alpha: 1)
+            scoreLabel.font = UIFont.init(name: "Best Friends Font", size: 25)
+            scoreLabel.textColor = #colorLiteral(red: 1, green: 0.831372549, blue: 0.4745098039, alpha: 1)
+            scoreLabel.shadowOffset = CGSize(width: 2, height: 2)
+            scoreLabel.shadowColor = .black
+        } else {
+            backGroundLabel.backgroundColor = #colorLiteral(red: 1, green: 0.2549019608, blue: 0.3019607843, alpha: 1)
         }
     }
 }
@@ -46,6 +58,10 @@ class QuestionViewController: UIViewController {
 extension QuestionViewController: CharacterManagerDelegate {
     func didReceiveCharacterUpdate(_ characterManager: CharacterManager, character: Character) {
         DispatchQueue.main.async {
+            self.scoreLabel.font = UIFont.init(name: "Chalkboard SE Regular", size: 19)
+            self.scoreLabel.textColor = .black
+            self.scoreLabel.shadowOffset = CGSize(width: 0, height: 0)
+            self.backGroundLabel.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
             self.questionLabel.text = character.name
             self.parseImage(from: character.imageURL)
             self.heroAlignment = character.alignment

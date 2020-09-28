@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C541381E24F7969F00DA3DAC /* PokeWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C541381E24F7969F00DA3DAC /* VillanOrHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillanOrHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C541382124F7969F00DA3DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C541382324F7969F00DA3DAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C541382524F7969F00DA3DAC /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		C541381524F7969F00DA3DAC = {
 			isa = PBXGroup;
 			children = (
-				C541382024F7969F00DA3DAC /* PokeWars */,
+				C541382024F7969F00DA3DAC /* VillanOrHero */,
 				C541381F24F7969F00DA3DAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,12 +72,12 @@
 		C541381F24F7969F00DA3DAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C541381E24F7969F00DA3DAC /* PokeWars.app */,
+				C541381E24F7969F00DA3DAC /* VillanOrHero.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C541382024F7969F00DA3DAC /* PokeWars */ = {
+		C541382024F7969F00DA3DAC /* VillanOrHero */ = {
 			isa = PBXGroup;
 			children = (
 				C5F5BFCD24FFA1B600598EA6 /* Model */,
@@ -91,7 +91,7 @@
 				C5F5BFD924FFB57400598EA6 /* Constants.swift */,
 				C567E8E62514E44000CB77F6 /* Fonts */,
 			);
-			path = PokeWars;
+			path = VillanOrHero;
 			sourceTree = "<group>";
 		};
 		C567E8E62514E44000CB77F6 /* Fonts */ = {
@@ -138,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C541381D24F7969F00DA3DAC /* PokeWars */ = {
+		C541381D24F7969F00DA3DAC /* VillanOrHero */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C541383224F796A100DA3DAC /* Build configuration list for PBXNativeTarget "PokeWars" */;
+			buildConfigurationList = C541383224F796A100DA3DAC /* Build configuration list for PBXNativeTarget "VillanOrHero" */;
 			buildPhases = (
 				C541381A24F7969F00DA3DAC /* Sources */,
 				C541381B24F7969F00DA3DAC /* Frameworks */,
@@ -150,9 +150,9 @@
 			);
 			dependencies = (
 			);
-			name = PokeWars;
-			productName = PokeWars;
-			productReference = C541381E24F7969F00DA3DAC /* PokeWars.app */;
+			name = VillanOrHero;
+			productName = MarvelVillanOrHero;
+			productReference = C541381E24F7969F00DA3DAC /* VillanOrHero.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C541381924F7969F00DA3DAC /* Build configuration list for PBXProject "PokeWars" */;
+			buildConfigurationList = C541381924F7969F00DA3DAC /* Build configuration list for PBXProject "VillanOrHero" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -183,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C541381D24F7969F00DA3DAC /* PokeWars */,
+				C541381D24F7969F00DA3DAC /* VillanOrHero */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -368,12 +368,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC9J79NVUW;
-				INFOPLIST_FILE = PokeWars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VillanOrHero/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.janduda.PokeWars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janduda.VillanOrHero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -386,12 +386,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HC9J79NVUW;
-				INFOPLIST_FILE = PokeWars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VillanOrHero/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.janduda.PokeWars;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janduda.VillanOrHero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C541381924F7969F00DA3DAC /* Build configuration list for PBXProject "PokeWars" */ = {
+		C541381924F7969F00DA3DAC /* Build configuration list for PBXProject "VillanOrHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C541383024F796A100DA3DAC /* Debug */,
@@ -410,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C541383224F796A100DA3DAC /* Build configuration list for PBXNativeTarget "PokeWars" */ = {
+		C541383224F796A100DA3DAC /* Build configuration list for PBXNativeTarget "VillanOrHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C541383324F796A100DA3DAC /* Debug */,

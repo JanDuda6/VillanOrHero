@@ -1,6 +1,6 @@
 //
 //  ScoreViewController.swift
-//  PokeWars
+//  MarvelVillanOrHero
 //
 //  Created by Kurs on 03/09/2020.
 //  Copyright © 2020 Kurs. All rights reserved.
