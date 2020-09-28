@@ -60,6 +60,12 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
