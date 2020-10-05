@@ -10,14 +10,14 @@ import UIKit
 
 class TopScoresViewController: UIViewController {
 
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet private weak var stackView: UIStackView!
     let questionManager = QuestionManager.sharedInstance
     var counterY = 0
 
     override func viewDidLoad() {
         if let topScore = questionManager.loadUserDefault()?.sorted(by: {$0.1 > $1.1}) {
             for scores in topScore {
-                createUILabel(with: "\(scores.key)    \(scores.value)", and: counterY)
+                createUILabel(with: "\(scores.key)    \(String(format: "%.2f", scores.value))", and: counterY)
                 counterY += 200
             }
         } else {

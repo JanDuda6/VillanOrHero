@@ -12,7 +12,7 @@ class UserViewController: UIViewController {
 
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var errorMessage: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet private weak var startButton: UIButton!
 
     var questionManager = QuestionManager.sharedInstance
 

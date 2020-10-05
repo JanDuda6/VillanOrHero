@@ -18,7 +18,7 @@
         <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="MarvelVillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="VillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,9 +46,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ku9-eI-bIH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ku9-eI-bIH">
                                 <rect key="frame" x="20" y="193" width="374" height="350"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ku9-eI-bIH" secondAttribute="height" multiplier="187:175" id="uhW-IK-W6t"/>
                                 </constraints>
@@ -80,7 +80,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-16-MZS">
                                 <rect key="frame" x="56" y="626" width="302" height="88"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2k-eR-Qib" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2k-eR-Qib" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="88"/>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="bad"/>
@@ -103,7 +103,7 @@
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wF-SB-5Z6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-DH-RC9" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-DH-RC9" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                         <rect key="frame" x="214" y="0.0" width="88" height="88"/>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="good"/>
@@ -181,7 +181,7 @@
         <!--Score View Controller-->
         <scene sceneID="Pu8-ho-Ks2">
             <objects>
-                <viewController id="idg-ZD-0cK" customClass="ScoreViewController" customModule="MarvelVillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="idg-ZD-0cK" customClass="ScoreViewController" customModule="VillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yTG-wR-Tjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgK-40-Tp6" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgK-40-Tp6" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="640" width="222" height="56"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -273,12 +273,12 @@
         <!--MainVC-->
         <scene sceneID="Mgr-Sn-V9p">
             <objects>
-                <viewController title="MainVC" definesPresentationContext="YES" modalPresentationStyle="fullScreen" id="WEl-V8-OUd" customClass="MenuViewController" customModule="MarvelVillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainVC" definesPresentationContext="YES" modalPresentationStyle="fullScreen" id="WEl-V8-OUd" customClass="MenuViewController" customModule="VillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hG0-OR-hoR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-Rh-unx" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-Rh-unx" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="740" width="222" height="56"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -297,7 +297,7 @@
                                     <action selector="buttonPressed:" destination="WEl-V8-OUd" eventType="touchUpInside" id="19f-01-dmy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxH-8E-SFU" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxH-8E-SFU" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="629" width="222" height="56"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -389,7 +389,7 @@
         <!--User View Controller-->
         <scene sceneID="E7i-eg-ACD">
             <objects>
-                <viewController id="m7F-uN-p7L" customClass="UserViewController" customModule="MarvelVillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m7F-uN-p7L" customClass="UserViewController" customModule="VillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BGW-78-nil">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +424,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26l-lt-dMl" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26l-lt-dMl" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="745" width="222" height="56"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -444,7 +444,7 @@
                                     <action selector="backButtonPressed:" destination="m7F-uN-p7L" eventType="touchUpInside" id="Jkf-sI-46H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-Dv-BW7" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-Dv-BW7" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="623" width="222" height="56"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -495,12 +495,12 @@
         <!--Top Scores View Controller-->
         <scene sceneID="gHu-HR-Sgb">
             <objects>
-                <viewController id="e2J-cM-tqK" customClass="TopScoresViewController" customModule="MarvelVillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e2J-cM-tqK" customClass="TopScoresViewController" customModule="VillanOrHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NVH-r1-2aw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0w-Om-Dl9" customClass="CustomButton" customModule="MarvelVillanOrHero" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0w-Om-Dl9" customClass="CustomButton" customModule="VillanOrHero" customModuleProvider="target">
                                 <rect key="frame" x="96" y="786" width="222" height="56"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

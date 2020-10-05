@@ -15,9 +15,11 @@ class QuestionViewController: UIViewController {
     @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var questionNumberLabel: UILabel!
-    @IBOutlet weak var backGroundLabel: UILabel!
+    @IBOutlet private weak var backGroundLabel: UILabel!
     
     var heroAlignment = ""
+    var timer: Timer?
+    var timePoints = 5.00
 
     var characterManager = CharacterManager()
     var questionManager = QuestionManager.sharedInstance
@@ -34,15 +36,18 @@ class QuestionViewController: UIViewController {
             checkAnswerAndChangeUIColor(sender: sender)
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
             questionManager.addScoreToUserDefault(with: questionManager.userName, and: questionManager.userResult)
+            questionManager.stopTimer()
             performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
         } else {
             checkAnswerAndChangeUIColor(sender: sender)
             characterManager.fetchCharacter()
-            scoreLabel.text = "Score: \(questionManager.userResult)"
+            scoreLabel.text = "Score: \(questionManager.roundScore())"
             questionNumberLabel.text = "\(questionManager.questionNumber)/5"
+            questionManager.stopTimer()
+
         }
     }
-    func checkAnswerAndChangeUIColor (sender: UIButton) {
+    func checkAnswerAndChangeUIColor(sender: UIButton) {
         if questionManager.checkAnswer(sender.accessibilityIdentifier!, characterAlignment: heroAlignment) {
             backGroundLabel.backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.8745098039, blue: 0.6, alpha: 1)
             scoreLabel.font = UIFont.init(name: "Best Friends Font", size: 25)
@@ -72,17 +77,13 @@ extension QuestionViewController: CharacterManagerDelegate {
         self.image.image = .none
         guard let imageURL = URL(string: url) else { return }
 
-        DispatchQueue.global().async {
-            if let imageData = try? Data(contentsOf: imageURL) {
-                let image = UIImage(data: imageData)
-                DispatchQueue.main.async {
-                    self.image.image = image
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.image.image = UIImage(systemName: Constants.SFSymbol)?.withTintColor(.black, renderingMode: .alwaysOriginal)
-                }
-            }
+        if let imageData = try? Data(contentsOf: imageURL) {
+            let image = UIImage(data: imageData)
+            self.image.image = image
+            questionManager.startTimer()
+        } else {
+            self.image.image = UIImage(systemName: Constants.SFSymbol)?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            questionManager.startTimer()
         }
     }
 }
