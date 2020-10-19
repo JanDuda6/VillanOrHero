@@ -14,7 +14,7 @@ class UserViewController: UIViewController {
     @IBOutlet private weak var errorMessage: UILabel!
     @IBOutlet private weak var startButton: UIButton!
 
-    var questionManager = QuestionManager.sharedInstance
+    let questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
         userNameTextField.delegate = self

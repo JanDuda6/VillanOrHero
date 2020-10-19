@@ -22,7 +22,7 @@ class QuestionViewController: UIViewController {
     var timePoints = 5.00
 
     var characterManager = CharacterManager()
-    var questionManager = QuestionManager.sharedInstance
+    let questionManager = QuestionManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,6 @@ class QuestionViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         if questionManager.questionNumber == 5 {
             checkAnswerAndChangeUIColor(sender: sender)
-            questionNumberLabel.text = "\(questionManager.questionNumber)/5"
             questionManager.addScoreToUserDefault(with: questionManager.userName, and: questionManager.userResult)
             questionManager.stopTimer()
             performSegue(withIdentifier: Constants.scoreVCSegue, sender: self)
